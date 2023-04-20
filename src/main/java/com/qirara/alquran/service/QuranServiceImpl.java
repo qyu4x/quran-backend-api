@@ -71,7 +71,7 @@ public class QuranServiceImpl implements QuranService{
         listSurah.stream().forEach(surah -> {
 
             String title = surah.select("a").text();
-            String  href = surah.select("a").attr("abs:href").replace(quranResource.getQuranKu(), "/");
+            String  href = surah.select("a").attr("abs:href").replace(quranResource.getQuranKu(), "");
 
             SurahResponse surahResponse = new SurahResponse();
             surahResponse.setTitle(title);

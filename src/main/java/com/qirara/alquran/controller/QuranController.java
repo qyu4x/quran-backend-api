@@ -38,7 +38,7 @@ public class QuranController {
         surahResponses.forEach(surahResponse -> {
             try {
                 Link link = WebMvcLinkBuilder
-                        .linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).detail(surahResponse.getPath().replace("/", "")))
+                        .linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).detail(surahResponse.getPath()))
                         .withRel("href");
 
                 EntityModel<SurahResponse> surahResponseEntityModel = EntityModel.of(surahResponse, link);
@@ -59,13 +59,13 @@ public class QuranController {
 
     }
 
-    @GetMapping("/{href}")
-    public ResponseEntity<WebResponse<SurahDetailResponse>> detail(@PathVariable("href") String href) throws IOException {
+    @GetMapping("/{link}")
+    public ResponseEntity<WebResponse<SurahDetailResponse>> detail(@PathVariable("link") String link) throws IOException {
         return new ResponseEntity<>(
                 new WebResponse<>(
                         HttpStatus.OK.value(),
                         HttpStatus.OK.getReasonPhrase(),
-                        quranService.detail(href)
+                        quranService.detail(link)
                 ),
                 HttpStatus.OK
         );
