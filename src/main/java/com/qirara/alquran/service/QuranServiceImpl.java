@@ -75,7 +75,7 @@ public class QuranServiceImpl implements QuranService{
 
             SurahResponse surahResponse = new SurahResponse();
             surahResponse.setTitle(title);
-            surahResponse.setHref(href);
+            surahResponse.setPath(href);
 
             surahResponses.add(surahResponse);
         });

@@ -9,6 +9,6 @@ public class SurahResponse {
 
     private String title;
 
-    private String href;
+    private String path;
 
 }
