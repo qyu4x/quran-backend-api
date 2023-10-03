@@ -43,7 +43,7 @@ http://165.22.102.134/api/v1/quran/{path}
 Example to retrieve surah details
 
 ```
-http://localhost:8080/api/v1/quran/al-ikhlas
+http://165.22.102.134/api/v1/quran/al-ikhlas
 ```
 Sample response
 ```json
