@@ -2,7 +2,7 @@
 
 #### 1. Retrieve a list of all surah
 ```
-http://localhost:8080/api/v1/quran/all
+http://165.22.102.134/api/v1/quran/all
 ```
 Sampel response :
 ```json
@@ -37,7 +37,7 @@ Sampel response :
 
 #### 2. Retrieve surah details
 ```
-http://localhost:8080/api/v1/quran/{path}
+http://165.22.102.134/api/v1/quran/{path}
 ```
 
 Example to retrieve surah details
